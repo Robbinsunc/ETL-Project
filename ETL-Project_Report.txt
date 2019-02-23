@@ -2,7 +2,7 @@
 
 ## Project Description
 
-For this project, we will download crime statistics from three Wake County, North Carolina cities: Raleigh, Durham and Cary. Data cleanup and transformation will be accomplished by using MySQL Workbench and Python using dependencies: Pandas, SQLalchemy. 
+For this project, we will download crime statistics from three North Carolina cities: Raleigh, Durham and Cary. Data cleanup and transformation will be accomplished by using MySQL Workbench and Python using dependencies: Pandas, SQLalchemy. 
 
 Crime statistics are easily located, however, every jurisdiction reports those statistics in a unquie format. We hope to find relationships, trends, contrasts by making the data uniform across these different cities. 
 
@@ -28,9 +28,9 @@ For consistency, we settled on keeping following categories in each dataframe:
 1. Date (Crime Reported - day of the week, year/month/day)
 2. Time of Crime
 3. Crime Type 
-	* Each jurisdiction labels similar crimes differently i.e. 	Durham has Nine different Larceny categories. 
-	* Crime categorized tables were created for each of the 	cities to compare like Crime Types
-	* The Crime Categories choosen were Assult, Murder, 	Stolen, and Other.	 
+	* Each jurisdiction labels similar crimes differently i.e. Durham has Nine different Larceny categories. 
+	* Crime categorized tables were created for each of the cities to compare like Crime Types
+	* The Crime Categories choosen were Assult, Murder, Stolen, and Other.	 
 4. City Name
 
 Data Transformation included:
@@ -41,10 +41,9 @@ Data Transformation included:
 * Joining crime categorized tables with City Crime statistics, 
 * Filtering to keep columns we needed and
 * Integrating heading names and crime caegories.
+* Concatinated city dataframes into one master dataframe
 
 ## Collection and **L**oad
 
-Lastly, the dataframes were converted to .csv files for each city to be uploaded into a MySQL database. A relational database was used because of the tabluar structure of the City Crime Statistics, and scalabilty necessary as more crime data and potential cities are added to the database. 
-
-## Appendix A: City Crime Database Schema
+Lastly, the master dataframe was converted to .csv files for each city to be uploaded into a MySQL database. A relational database was used because of the tabluar structure of the City Crime Statistics, and scalabilty necessary as more crime data and potential cities are added to the database. 
 
